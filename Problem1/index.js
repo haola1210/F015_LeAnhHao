@@ -49,7 +49,7 @@ const sum_to_n_b = n => {
 }
 
 /**
- * Another way is recursion. But not recommend this approach
+ * Another way is recursion. But not recommend this approach, detail in readme
  */
 const sum_to_n_c = n => {
   try {
