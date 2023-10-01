@@ -31,4 +31,11 @@ const data = [{"currency":"BLUR","date":"2023-08-29T07:10:40.000Z","price":0.208
 {"currency":"YieldUSD","date":"2023-08-29T07:10:40.000Z","price":1.0290847966101695},
 {"currency":"ZIL","date":"2023-08-29T07:10:50.000Z","price":0.01651813559322034}]
 
-export default data
+const currency = ['BLUR', 'bNEO', 'BUSD', 'USD', 'ETH', 'GMX', 'stEVMOS', 'LUNA', 'rATOM', 'STRD', 'EVMOS', 'IBCX', 'IRIS', 'ampLUNA', 'KUJI', 'stOSMO', 'axlUSDC', 'ATOM', 'stATOM', 'OSMO', 'rSWTH', 'stLUNA', 'LSI', 'OKB', 'OKT', 'SWTH', 'USC', 'USDC', 'WBTC', 'wstETH', 'YieldUSD', 'ZIL'] as const;
+
+export type ICurrency = typeof currency[number]
+
+export {
+  data,
+  currency
+}

@@ -1,0 +1,101 @@
+@import '/src/_variables.scss';
+
+.form {
+  color: white;
+  background-color: $dark;
+  box-shadow: $main 0px 48px 100px 0px;
+  padding: 10px;
+  border-radius: 20px;
+
+  &__title {
+    padding: 8px 20px;
+    font-size: 20px;
+    color: $main;
+  }
+  
+  &__switch-btn {
+    & > div {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      padding: 8px;
+      background-color: $dark-grey;
+      border: 5px solid $dark;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      border-radius: 10px;
+      // box-shadow: inset 0 0  #333;
+      svg {
+        transform: rotate(90deg);
+        width: 24px;
+        height: 24px;
+        color: $main;
+      }
+
+      &:hover {
+        background-color: rgb(60, 60, 60);
+      }
+    }
+  }
+  
+  &__pay {
+    margin: 5px 0;
+    position: relative;
+  }
+
+  &__input-title, &__input-helper {
+    color: $grey;
+  }
+
+  &__input-helper {
+    font-family: sans-serif;
+
+    .error {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: rgb(255, 111, 111)
+    }
+
+    .in-usd {
+      color: $main
+    }
+  }
+
+  &__input {
+    font-family: sans-serif;
+    background-color: $dark-grey;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    &:hover {
+      border-color:  $main;
+    }
+  }
+
+  &__input-body{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    & > input, .receive-value {
+      
+      background-color: inherit;
+      outline: none;
+      border: none;
+      color: white;
+      width: 320px;
+      font-size: 32px;
+    }
+
+    & > .receive-value {
+      height: 36px;
+    }
+  }
+}
+
+.disabled {
+  cursor: not-allowed;
+}
